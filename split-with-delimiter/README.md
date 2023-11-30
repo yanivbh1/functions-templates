@@ -1,12 +1,13 @@
-# Hello world (Node.js)
+# Split a string using custom delimiter (Node.js)
 ## Description
-Hello world function in Node.js that add a new field named as the `field_to_ingest` input.
+TBD
 ## Supported event formats
 JSON 
 ## Inputs:
 Input name | Description | Type
 |---|---|---|
-| field_to_ingest | The name of the field that will be added to the event | string |
+| field_to_split | The name of the field that should be splitted | string |
+| delimiter | The delimiter to use | string |
 ## Test event 
 
 ### Inputs
