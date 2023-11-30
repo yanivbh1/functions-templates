@@ -18,7 +18,7 @@ function eventHandler(payload, headers, inputs) {
     const decodedPayload = payload.toString('utf-8');
     const asJson = JSON.parse(decodedPayload);
 
-    asJson[inputs.field_to_split]=asJson[inputs.field_to_split].split(inputs.delimiter)
+    asJson.inputs.field_to_split=asJson.inputs.field_to_split.split(inputs.delimiter)
 
     return {
         processedMessage: Buffer.from(JSON.stringify(asJson), 'utf-8'),
