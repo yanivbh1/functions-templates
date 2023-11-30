@@ -1,5 +1,5 @@
-function_name: hello-world-nodejs
-description: Hello world function in Node.js
+function_name: split-with-delimiter
+description: Splitting a string based on custom delimiter in Node.js
 tags:
   - tag: json
   - tag: nodejs
