@@ -5,6 +5,6 @@ tags:
   - tag: nodejs
 runtime: nodejs18.x
 inputs:
-  - name: field_to_split
+  - name: key_to_split
   - name: delimiter
 handler: index.handler

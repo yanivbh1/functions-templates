@@ -24,7 +24,7 @@ function eventHandler(payload, headers, inputs) {
     // console.log(asJson[field[0]]["object"])
     // console.log(inputs2)
     // console.log(asJson[inputs2])
-    asJson[inputs.field_to_split]=asJson[inputs.field_to_split].split(inputs.delimiter)
+    asJson[inputs.key_to_split]=asJson[inputs.key_to_split].split(inputs.delimiter)
 
     // asJson[inputs.field_to_split]=asJson[inputs.field_to_split].split(inputs.delimiter)
 
@@ -33,3 +33,15 @@ function eventHandler(payload, headers, inputs) {
         processedHeaders: headers
     };
 }
+
+// var doc = {
+//     "active": true,
+//     "aggregate_usage": null,
+//     "stiggEntityUrl": "https://app.stigg.io/production-9bb95b22/subscriptions/subscription-plan-cloud-growth-buckets-9c6433",
+// }
+// const asJson = doc
+// const inputs = {
+//     "key_to_split":"stiggEntityUrl",
+//     "delimiter":"/"
+// }
+// console.log(asJson[inputs.key_to_split].split(inputs.delimiter))
