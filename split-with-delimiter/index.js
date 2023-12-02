@@ -18,7 +18,7 @@ function eventHandler(payload, headers, inputs) {
     // const decodedPayload = payload.toString('utf-8');
     
     // const asJson = JSON.parse(payload);
-    // const asJson = payload
+    const asJson = payload
     // const field = inputs.field_to_split.split(".")
     // console.log(field)
     // console.log(asJson[field[0]]["object"])
