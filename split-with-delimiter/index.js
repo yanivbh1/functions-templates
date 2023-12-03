@@ -14,7 +14,7 @@ exports.handler = async (event) => { // The name of this file and this function 
 function eventHandler(payload, headers, inputs) {
     // Here is a short example of converting the payload to a json object and returning it as an Uint8Array
     const decodedPayload = payload.toString('utf-8');
-    const asJson = JSON.parse(payload);
+    const asJson = JSON.parse(decodedPayload);
 
     // START Handle event here
     asJson[inputs.key_to_split]=asJson[inputs.key_to_split].split(inputs.delimiter)
