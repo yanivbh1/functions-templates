@@ -18,7 +18,7 @@ function eventHandler(payload, headers, inputs) {
 
     // START Handle event here
     const filteredObj = {};
-    inputs.keysToKeep.split(",");
+    inputs.keysToKeep = inputs.keysToKeep.split(",");
     inputs.keysToKeep.forEach(key => {
         if (asJson.hasOwnProperty(key)) {
           filteredObj[key] = asJson[key];
@@ -53,7 +53,7 @@ function eventHandler(payload, headers, inputs) {
 //     address: '123 Main St'
 //   };
   
-//   const keysToKeep = ['name', 'age', 'email'];
-//   const filteredJSON = filterJSON(originalJSON, keysToKeep);
+//   const keysToKeep = "name,age,email";
+//   const filteredJSON = filterJSON(originalJSON, keysToKeep.split(","));
 //   console.log(filteredJSON);
   
