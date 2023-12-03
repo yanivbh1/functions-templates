@@ -17,12 +17,43 @@ function eventHandler(payload, headers, inputs) {
     const asJson = JSON.parse(payload);
 
     // START Handle event here
-    asJson[inputs.key_to_split]=asJson[inputs.key_to_split].split(inputs.delimiter)
-    
+    const filteredObj = {};
+    inputs.keysToKeep.split(",");
+    inputs.keysToKeep.forEach(key => {
+        if (asJson.hasOwnProperty(key)) {
+          filteredObj[key] = asJson[key];
+        }
+    });
+
     // END Handle event here
 
     return {
-        processedMessage: Buffer.from(JSON.stringify(asJson), 'utf-8'),
+        processedMessage: Buffer.from(JSON.stringify(filteredObj), 'utf-8'),
         processedHeaders: headers
     };
 }
+
+// function filterJSON(jsonObj, keysToKeep) {
+//     const filteredObj = {};
+    
+//     keysToKeep.forEach(key => {
+//       if (jsonObj.hasOwnProperty(key)) {
+//         filteredObj[key] = jsonObj[key];
+//       }
+//     });
+  
+//     return filteredObj;
+//   }
+  
+//   // Example usage:
+//   const originalJSON = {
+//     name: 'John Doe',
+//     age: 30,
+//     email: 'johndoe@example.com',
+//     address: '123 Main St'
+//   };
+  
+//   const keysToKeep = ['name', 'age', 'email'];
+//   const filteredJSON = filterJSON(originalJSON, keysToKeep);
+//   console.log(filteredJSON);
+  

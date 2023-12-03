@@ -1,0 +1,9 @@
+function_name: keys-to-save
+description: TBD
+tags:
+  - tag: json
+  - tag: nodejs
+runtime: nodejs18.x
+inputs:
+  - name: keysToKeep
+handler: index.handler
