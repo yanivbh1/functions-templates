@@ -1,34 +1,40 @@
-# Split a string using custom delimiter (Node.js)
+# Split a string
 ## Description
-TBD
+Split a string key in a JSON object using custom delimiter
 ## Supported event formats
 JSON 
 ## Inputs:
 Input name | Description | Type
 |---|---|---|
-| field_to_split | The name of the field that should be splitted | string |
+| key_to_split | The name of the key that should be splitted | string |
 | delimiter | The delimiter to use | string |
-## Test event 
+## Example
+
+### Test Event:
+
+```json
+{
+    "active": true,
+    "aggregate_usage": null,
+    "amount": null,
+    "amount_decimal": null,
+    "api_version": "2022-11-15"
+}
+```
 
 ### Inputs
 Input name | Value
 |---|---|
-| field_to_ingest | hello_world_enrichment
+| key_to_split | api_version
+| delimiter | -
 
-### Event:
-
+### Output
 ```json
 {
-    "id": 1
-}
-```
-
-## Output to the test event
-
-### Modified Event:
-```json
-{
-    "id": 1,
-    "hello_world_enrichment": "Hello from Memphis!"
+    "active": true,
+    "aggregate_usage": null,
+    "amount": null,
+    "amount_decimal": null,
+    "api_version": ["2022","11","15"]
 }
 ```
