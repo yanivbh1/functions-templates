@@ -1,0 +1,9 @@
+function_name: filter-events-based-on-key
+description: Filtering events if a certain key is found. For JSON objects.
+tags:
+  - tag: json
+  - tag: nodejs
+runtime: nodejs18.x
+inputs:
+  - name: key_to_search
+handler: main.handler
