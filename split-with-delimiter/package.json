@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "memphis-functions": "latest"
-  }
+    "memphis-functions": "^1.0.3"
+  },
+  "keywords": []
 }
