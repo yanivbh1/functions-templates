@@ -29,7 +29,5 @@ function eventHandler(payload, headers, inputs) {
         };
     }
     
-    // END Handle event here
-
-    
+    // END Handle event here   
 }
